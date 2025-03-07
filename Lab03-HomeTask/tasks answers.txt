@@ -1,0 +1,28 @@
+Task 2: Running the Code Without Interrupt
+
+When running the code without interrupts, the system continuously checks sensor values in a loop, leading to unnecessary CPU usage.
+Before Interrupt: The ESP32 constantly polls the sensor, which may cause delays in executing other tasks.
+After Interrupt: With interrupts, the sensor only updates when an event (like a timer or external trigger) occurs, making the program more efficient.
+
+
+Task 3: Understanding Debounce Issue
+
+What is a Debounce Issue?
+When pressing a button, mechanical contacts inside bounce multiple times before settling, causing multiple unwanted signals. This is called switch bouncing.
+
+Why Get Rid of It?
+To ensure reliable input detection and avoid unintended multiple presses.
+
+Where is it a Problem?
+Critical in keyboards, game controllers, industrial control systems, and embedded devices where accurate input is necessary.
+
+Why Does it Occur?
+It's a hardware issue due to mechanical contact bouncing. Not a compiler or logical error, but it can be solved through software or hardware debounce techniques.
+
+Task 4: Why Do We Use Interrupts?
+
+Why Use Interrupts?
+Interrupts allow the microcontroller to respond to external events immediately instead of constantly checking conditions (polling).
+
+How Do Interrupts Reduce Processing Cost?
+Instead of running unnecessary loops, the microcontroller remains idle and executes other tasks. It only responds when an interrupt is triggered, making it energy-efficient and improving performance.
