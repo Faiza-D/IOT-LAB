@@ -1,0 +1,14 @@
+Blynk RGB Control Using Three Sliders
+This script allows remote control of an RGB LED via the Blynk cloud using three sliders (Red, Green, and Blue). It connects an ESP32 to WiFi and adjusts LED colors dynamically.
+
+Workflow:
+WiFi Connection: Connects to the specified WiFi and prints the assigned IP.
+Blynk Initialization: Authenticates with the Blynk cloud for real-time control.
+NeoPixel Setup: Initializes an RGB LED using GPIO pin 48.
+Color Adjustment:
+V0 Handler: Updates the red value from the slider.
+V1 Handler: Updates the green value from the slider.
+V2 Handler: Updates the blue value from the slider.
+set_color(): Applies the updated RGB values to the LED.
+Connection Events: Logs when Blynk connects or disconnects.
+Main Loop: Continuously runs Blynk to handle user interactions.
